@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+    "name": "Yay Girls!",
+    "description": "Cut out the negativity in your life",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "flower.png"
+}
