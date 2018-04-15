@@ -28,7 +28,7 @@ var bad2fab = {
 var fab = [
   "boss",
   "charmer",
-   "icon",
+  "icon",
   "confident woman",
   "charismatic woman",
   "beautiful",
@@ -54,7 +54,7 @@ var fab = [
 var bad = [
   "bitch",
   "slut",
-   "ho",
+  "ho",
   "whore",
   "tease",
   "fat",
