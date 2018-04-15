@@ -25,23 +25,6 @@ var bad2fab = {
   prude: "gem"
 };
 
-str = str.replace(/cat|dog|goat/gi, function(matched){
-  return mapObj[matched];
-});
-
-
-var powerWords = [
-  "boss",
-  "queen",
-  "goddess",
-  "babe"
-
-
-
-
-];
-
-
 
 for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
@@ -50,13 +33,10 @@ for (var i = 0; i < elements.length; i++) {
         var node = element.childNodes[j];
 
         if (node.nodeType === 3) {
-          for(var k = 0; k < meanWords.length; k++)
-          {
-            var text = node.nodeValue;
-            var oldText = meanWords[k];
-            var newText = powerWords[k];
-            var replacedText = text.replace(oldText, newText);
-          }
+          var text = node.nodeValue;
+          var replacedText = text.replace(/bitch/gi, function(matched){
+            return bad2fab[matched];
+          });
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
