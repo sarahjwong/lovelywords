@@ -78,9 +78,6 @@ var bad = [
 ];
 var replacedText = "";
 
-
-
-
 for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
 
@@ -104,13 +101,11 @@ for (var i = 0; i < elements.length; i++) {
                   console.log("Replaced with" + replacedText);
                   element.replaceChild(document.createTextNode(replacedText), node);
               }
-
             }
           }
-
-
-
+      }
     }
+  }
 
 
 
@@ -118,5 +113,5 @@ for (var i = 0; i < elements.length; i++) {
 
 
 
-        }
-    }
+
+  

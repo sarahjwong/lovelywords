@@ -17,6 +17,6 @@
 
     "page_action": {
       "default_popup": "popup.html",
-      "default_icon": "flower.png"
+      "default_icon": "flower.jpg"
     }
 }
