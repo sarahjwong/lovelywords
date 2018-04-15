@@ -84,10 +84,20 @@ for (var i = 0; i < elements.length; i++) {
     for (var j = 0; j < element.childNodes.length; j++) {
         var node = element.childNodes[j];
 
-        if (node) {
-
+        if (node.nodeType === 3) {
+          console.log("Node:" + node);
+          console.log("Node name:" + node.nodeName);
           var text = node.nodeValue;
           console.log("Original: " + text);
+
+          var x = text.search("embed");
+          var y = text.search("{")
+          if (x>=0 || y>=0) {
+            console.log("Hello");
+            break;
+          }
+
+
 
           for(var k = 0; k < bad.length; k++)
           {

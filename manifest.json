@@ -1,6 +1,6 @@
 {
 "manifest_version": 2,
-    "name": "Yay Girls!",
+    "name": "Lovely Words",
     "description": "Cut the negativity out of your life",
     "version": "1.0",
     "content_scripts": [
@@ -16,7 +16,11 @@
     ],
 
     "page_action": {
-      "default_popup": "popup.html",
-      "default_icon": "flower.jpg"
+      "setPopup": "popup.html",
+      "default_icon": { 
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" },
+      "default_title": "Lovely Words"
     }
 }
