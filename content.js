@@ -10,10 +10,10 @@ var bad2fab = {
   aggressive: "passionate",
   bossy: "articulate",
   emotional: "generous",
-  hormonal: ""
+  hormonal: "inspiring"
   pussy: "warrior",
   cunt: "heroine",
-  sweetie: ""
+  sweetie: "champion"
   girly: "professional",
   unattractive: "photogenic",
   ugly: "dazzling",
@@ -22,8 +22,9 @@ var bad2fab = {
   doll: "respectable woman",
   skank: "good egg",
   tramp: "first-in-command",
-  prude: ""
+  prude: "gem"
 };
+
 str = str.replace(/cat|dog|goat/gi, function(matched){
   return mapObj[matched];
 });
