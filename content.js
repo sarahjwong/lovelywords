@@ -10,10 +10,10 @@ var bad2fab = {
   aggressive: "passionate",
   bossy: "articulate",
   emotional: "generous",
-  hormonal: "inspiring"
+  hormonal: "inspiring",
   pussy: "warrior",
   cunt: "heroine",
-  sweetie: "champion"
+  sweetie: "champion",
   girly: "professional",
   unattractive: "photogenic",
   ugly: "dazzling",
@@ -25,6 +25,59 @@ var bad2fab = {
   prude: "gem"
 };
 
+var fab = [
+  "boss",
+  "charmer",
+   "icon",
+  "confident woman",
+  "charismatic woman",
+  "beautiful",
+  "CEO",
+  "passionate",
+  "articulate",
+  "generous",
+  "inspiring",
+  "warrior",
+  "heroine",
+  "champion",
+  "professional",
+  "photogenic",
+  "dazzling",
+  "respectable woman",
+  "genius",
+  "respectable woman",
+  "good egg",
+  "first-in-command",
+  "gem"
+];
+
+var bad = [
+  "bitch",
+  "slut",
+   "ho",
+  "whore",
+  "tease",
+  "fat",
+  "airhead",
+  "aggressive",
+  "bossy",
+  "emotional",
+  "hormonal",
+  "pussy",
+  "cunt",
+  "sweetie",
+  "girly",
+  "unattractive",
+  "ugly",
+  "spinster",
+  "bimbo",
+  "doll",
+  "skank",
+  "tramp",
+  "prude"
+];
+var replacedText = "";
+
 
 
 
@@ -34,24 +87,36 @@ for (var i = 0; i < elements.length; i++) {
     for (var j = 0; j < element.childNodes.length; j++) {
         var node = element.childNodes[j];
 
-        if (node.nodeType === 3) {
+        if (node) {
+
           var text = node.nodeValue;
-          bad2fab.forEach(function( word ) {
-    var myExp = new RegExp(word, 'gi');
-    var replacedText = text.replace(myExp, function(matched){
-            return bad2fab[matched];
-          });
+          console.log("Original: " + text);
 
-    });
-      }
-      }
-  }
+          for(var k = 0; k < bad.length; k++)
+          {
+            if(text)
+            {
+              console.log("Text found");
+              var oldWord = new RegExp(bad[k] , 'gi');
+              console.log("regex " + oldWord);
+              replacedText = text.replace(oldWord, fab[k]);
+              if (replacedText !== text) {
+                  console.log("Replaced with" + replacedText);
+                  element.replaceChild(document.createTextNode(replacedText), node);
+              }
 
-
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
             }
+          }
+
+
+
+    }
+
+
+
+
+
+
+
         }
     }
-}
